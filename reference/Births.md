@@ -6,7 +6,7 @@ the period from January 1st, 1968 to December 31st, 2024.
 ## Usage
 
 ``` r
-data(Births)
+Births
 ```
 
 ## Format
@@ -19,12 +19,12 @@ A data frame with 20,820 rows and 2 variables:
 
 ## Source
 
-INSEE, Statistiques de l'état civil –
+INSEE, Civil registration statistics –
 <https://www.insee.fr/fr/statistiques/8582123?sommaire=8582147>
 
 ## Details
 
-The dataset corresponds to the INSEE series **T79jnais**. The raw data
+The dataset corresponds to the INSEE series **`T79jnais`**. The raw data
 can be downloaded as a CSV file here:
 <https://www.insee.fr/fr/statistiques/fichier/8582123/T79jnais.csv>
 

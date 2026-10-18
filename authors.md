@@ -7,7 +7,7 @@
 - **Alain Quartier-la-Tente**. Author.
   [](https://orcid.org/0000-0001-7890-3857)
 
-- **Tanguy Barthelemy**. Author, maintainer, artist.
+- **Tanguy Barthelemy**. Author, maintainer, artist, copyright holder.
 
 - **Anna Smyk**. Author.
 
@@ -18,12 +18,12 @@ Source:
 
 Palate J, Quartier-la-Tente A, Barthelemy T, Smyk A (2026).
 *rjd3toolkit: Utility Functions Around 'JDemetra+ 3.0'*. R package
-version 3.8.0.9000, <https://github.com/rjdverse/rjd3toolkit>.
+version 3.9.0.9000, <https://github.com/rjdverse/rjd3toolkit>.
 
     @Manual{,
       title = {rjd3toolkit: Utility Functions Around 'JDemetra+ 3.0'},
       author = {Jean Palate and Alain Quartier-la-Tente and Tanguy Barthelemy and Anna Smyk},
       year = {2026},
-      note = {R package version 3.8.0.9000},
+      note = {R package version 3.9.0.9000},
       url = {https://github.com/rjdverse/rjd3toolkit},
     }

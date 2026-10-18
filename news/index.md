@@ -1,6 +1,6 @@
 # Changelog
 
-## rjd3toolkit 3.8.0.9000
+## rjd3toolkit 3.9.0.9000
 
 All notable changes to this project will be documented in this file.
 
@@ -8,19 +8,70 @@ The format is based on [Keep a
 Changelog](https://keepachangelog.com/en/1.1.0/), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-### [Unreleased](https://github.com/rjdverse/rjd3toolkit/compare/3.8.0...HEAD)
+### [Unreleased](https://github.com/rjdverse/rjd3toolkit/compare/v3.9.0...HEAD)
 
-### [3.8.0](https://github.com/rjdverse/rjd3toolkit/compare/v3.7.1...3.8.0) - 2026-07-09
+### [3.9.0](https://github.com/rjdverse/rjd3toolkit/compare/v3.8.0...v3.9.0) - 2026-09-21
+
+#### Added
+
+- New function `complete_modelling_context` to add new regressors and
+  variables to a modelling_context object
+
+#### Deprecated
+
+- `sa_preprocessing` is now deprecated. Please don’t use any more this
+  function. [\#122](https://github.com/rjdverse/rjd3toolkit/issues/122)
 
 #### Changed
 
-- Updated JARS from jdplus-main to
+- `modelling_context` accepts regressor with and without names in nested
+  structure.
+
+- `add_usrdefvar` accepts multiple regressor in the same group.
+  [\#106](https://github.com/rjdverse/rjd3toolkit/issues/106)
+
+- `add_usrdefvar` renames automatically the group or variables that
+  contains a dot (`.`)
+  [\#148](https://github.com/rjdverse/rjd3toolkit/issues/148).
+
+- Updated jdplus-main JARS from 3.8.0 to 3.9.0
+
+#### Fixed
+
+- `modelling_context` now accept `JD3_TS`, `JD3_DYNAMICTS` and
+  `JD3_TSCOLLECTION` object
+  [\#111](https://github.com/rjdverse/rjd3toolkit/issues/111)
+- All unnamed variables are regrouped together under the `r` group.
+  [\#107](https://github.com/rjdverse/rjd3toolkit/issues/107)
+- Unnamed regressors and regressors with duplicated names are renamed
+  with `x1`, `x2`… pattern.
+  [\#107](https://github.com/rjdverse/rjd3toolkit/issues/107)
+- Variables and regressor with dot (`.`) in their name are renamed in
+  `modelling_context`. The dot is replaced with an underscore.
+  [\#148](https://github.com/rjdverse/rjd3toolkit/issues/148)
+
+### [3.8.0](https://github.com/rjdverse/rjd3toolkit/compare/v3.7.1...v3.8.0) - 2026-07-09
+
+#### Added
+
+- Package-level documentation page
+
+#### Changed
+
+- Updated JARS from `jdplus-main` to
   [3.8.0](https://github.com/jdemetra/jdplus-main/releases/tag/v3.8.0)
+- New url for online documentation (<https://doc.jdemetra.org>)
+- New formating (apply [`air`](https://posit-dev.github.io/air/) on
+  package)
 
 #### Fixed
 
 - Fix bug in weighted calendar regressors.
   [rjdverse/rjd3workspace#131](https://github.com/rjdverse/rjd3workspace/issues/131)
+- Fix typo between `"ts"` and `"tc"`
+  [\#159](https://github.com/rjdverse/rjd3toolkit/issues/159)
+- Some typos are corrected in the documentation. Examples have been
+  updated.
 
 ### [3.7.1](https://github.com/rjdverse/rjd3toolkit/compare/v3.6.0...v3.7.1) - 2026-03-10
 
@@ -67,9 +118,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   [\#85](https://github.com/rjdverse/rjd3toolkit/issues/85)
 - Documentation of `bias` argument in
   [`set_benchmarking()`](https://rjdverse.github.io/rjd3toolkit/reference/set_benchmarking.md)
-- New datasets : `Electricity` (French national electricity consumtion),
-  `Births` (Number of births registered in France from 1968 to 2024),
-  `x13_spec_default`(Default X13 specification) and
+- New datasets : `Electricity` (French national electricity
+  consumption), `Births` (Number of births registered in France from
+  1968 to 2024), `x13_spec_default`(Default X13 specification) and
   `tramoseats_spec_default` (Default Tramo-Seats specification)
 - New [`print()`](https://rdrr.io/r/base/print.html) and
   [`summary()`](https://rdrr.io/r/base/summary.html) method for

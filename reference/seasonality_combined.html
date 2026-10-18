@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">rjd3toolkit</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3.8.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3.9.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +51,7 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">seasonality_combined</span><span class="op">(</span></span>
 <span>  <span class="va">data</span>,</span>
 <span>  period <span class="op">=</span> <span class="cn">NA</span>,</span>
-<span>  firstperiod <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/time.html" class="external-link">cycle</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>,</span>
+<span>  firstperiod <span class="op">=</span> <span class="fu">stats</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/r/stats/time.html" class="external-link">cycle</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>,</span>
 <span>  mul <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
@@ -69,7 +69,7 @@
 
 
 <dt id="arg-firstperiod">firstperiod<a class="anchor" aria-label="anchor" href="#arg-firstperiod"></a></dt>
-<dd><p>Position in a cycle of the first obs.
+<dd><p>Position in a cycle of the first observation.
 For example, for a monthly, <code>firstperiod = 1</code> means January.
 If <code>data</code> is not a <code>"ts"</code> object, <code>firstperiod = 1</code> by default.</p></dd>
 
@@ -80,7 +80,7 @@ If <code>data</code> is not a <code>"ts"</code> object, <code>firstperiod = 1</c
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>a <code>list</code> with several seasonnality tests (kruskalwallis, stable and evolutive)</p>
+    <p>a <code>list</code> with several seasonality tests (Kruskal-Wallis, stable and evolutive)</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -139,43 +139,43 @@ If <code>data</code> is not a <code>"ts"</code> object, <code>firstperiod = 1</c
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NONE"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $kruskalwallis</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Value: 2.631691 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P-Value: 0.8534 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Value: 4.732747 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P-Value: 0.5785 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $stable</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $stable$SSM</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 85.10141</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 106.5554</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $stable$dfM</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 6</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $stable$SSR</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 9844.445</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 25873.32</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $stable$dfR</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 993</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $stable$test</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Value: 1.430683 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P-Value: 0.1996 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Value: 0.6815871 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P-Value: 0.6646 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $evolutive</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $evolutive$SSM</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1009.13</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3453.581</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $evolutive$dfM</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 141</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $evolutive$SSR</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 7066.424</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 19459.96</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $evolutive$dfR</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 846</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $evolutive$test</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Value: 0.8568379 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> P-Value: 0.8744 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Value: 1.064827 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> P-Value: 0.3008 </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
