@@ -97,43 +97,43 @@ seasonality_combined(random_t(2, 1000), 7)
 #> [1] "NONE"
 #> 
 #> $kruskalwallis
-#> Value: 4.732747 
-#> P-Value: 0.5785 
+#> Value: 2.105478 
+#> P-Value: 0.9097 
 #> 
 #> $stable
 #> $stable$SSM
-#> [1] 106.5554
+#> [1] 34.09417
 #> 
 #> $stable$dfM
 #> [1] 6
 #> 
 #> $stable$SSR
-#> [1] 25873.32
+#> [1] 9371.435
 #> 
 #> $stable$dfR
 #> [1] 993
 #> 
 #> $stable$test
-#> Value: 0.6815871 
-#> P-Value: 0.6646 
+#> Value: 0.6021047 
+#> P-Value: 0.7288 
 #> 
 #> 
 #> $evolutive
 #> $evolutive$SSM
-#> [1] 3453.581
+#> [1] 1364.838
 #> 
 #> $evolutive$dfM
 #> [1] 141
 #> 
 #> $evolutive$SSR
-#> [1] 19459.96
+#> [1] 5857.147
 #> 
 #> $evolutive$dfR
 #> [1] 846
 #> 
 #> $evolutive$test
-#> Value: 1.064827 
-#> P-Value: 0.3008 
+#> Value: 1.398125 
+#> P-Value: 0.0031 
 #> 
 #> 
 ```
